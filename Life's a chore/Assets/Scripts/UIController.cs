@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI : MonoBehaviour
+public class UIController : MonoBehaviour
 {
     private int score = 0;
-    public Text scoreText;
-    public Text timeText;
+    [SerializeField] public Text scoreText;
+    [SerializeField] public Text timeText;
+
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void Update()
     {

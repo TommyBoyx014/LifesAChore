@@ -8,15 +8,27 @@ public class ChangeScene : MonoBehaviour
     System.Random rand = new System.Random();
     int num = -1;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        num = rand.Next(0,5);   //random int 0 to 4
-    }
-
     public void next()
     {
+        num = rand.Next(0, 4);   //random int 0 to 3
         Debug.Log("" + num);
-        SceneManager.LoadScene(num);
+        switch (num)
+        {
+            case 0:
+                SceneManager.LoadScene("MowLawn");
+                break;
+            case 1:
+                SceneManager.LoadScene("SortDishes");
+                break;
+            case 2:
+                SceneManager.LoadScene("PumpTire");
+                break;
+            case 3:
+                SceneManager.LoadScene("GetInside");
+                break;
+            default:
+                break;
+        }
+
     }
 }

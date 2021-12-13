@@ -38,7 +38,7 @@ public class ItemSpawner : MonoBehaviour
                 bowl = Instantiate(bowl_prefab, this.transform.position, Quaternion.Euler(-90, 0, 0));
                 break;
             case 3:
-                fork = Instantiate(fork_prefab, this.transform.position, Quaternion.Euler(-90, 0, 0));
+                fork = Instantiate(fork_prefab, this.transform.position, Quaternion.Euler(-80, 0, 0));
                 break;
             case 4:
                 spoon = Instantiate(spoon_prefab, this.transform.position, Quaternion.Euler(-90, 0, 0));

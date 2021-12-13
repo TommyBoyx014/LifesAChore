@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9bcf97cfe8b2e2b499add2dad59949b9
   - enabled: 1
-    path: Assets/Scenes/MowLawn.unity
+    path: Assets/MowLawn/MowLawn.unity
     guid: 096b745b968bfb24589965f4ad98a59e
   - enabled: 1
-    path: Assets/Scenes/SortDishes.unity
+    path: Assets/SortDishes/SortDishes.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/PumpTire.unity
+    path: Assets/PumpTire/PumpTire.unity
     guid: 68be65790e305fd409b322b764d27b03
   - enabled: 1
-    path: Assets/Scenes/GetInside.unity
+    path: Assets/GetInside/GetInside.unity
     guid: 524ef7d6df582be43b7ae2fb8d5c16a5
   m_configObjects: {}

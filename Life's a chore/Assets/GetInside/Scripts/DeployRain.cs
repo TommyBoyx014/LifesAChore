@@ -12,14 +12,14 @@ public class DeployRain : MonoBehaviour
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        StartCoroutine(asteroidWave());
+        StartCoroutine(rainWave());
     }
     private void spawnEnemy()
     {
         GameObject a = Instantiate(rainPrefab) as GameObject;
         a.transform.position = new Vector3( Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y * -2,0);
     }
-    IEnumerator asteroidWave()
+    IEnumerator rainWave()
     {
         while (true)
         {

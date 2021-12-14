@@ -4,33 +4,29 @@ using UnityEngine;
 
 public class Bowl : MonoBehaviour
 {
-    Material mat;
+
     public Vector3 movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
     public int rand = ItemSpawner.rand;
-    System.Random randDirty = new System.Random();
-    int dirty = 0;
-
+    public int dirty = 0;
     // Start is called before the first frame update
     void Start()
     {
-        this.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.white);
-        dirty = randDirty.Next(1, 3);
-        movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
-        switch (dirty)
-        {
-            case 1: //dirty
-                this.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.blue);
-                break;
-            case 2: //clear
-                this.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.white);
-                break;
-        }
 
+        movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
+        
 }
 
 // Update is called once per frame
 void Update()
     {
+        if(gameObject.tag == "Dirty")
+        {
+            dirty = 1;
+        }
+        else
+        {
+            dirty = 2;
+        }
         switch (dirty)
         {
 

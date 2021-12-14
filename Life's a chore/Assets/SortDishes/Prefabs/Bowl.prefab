@@ -94,5 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0f4d8bae0da9a4c9d7a049a853e20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tex: {fileID: 2800000, guid: 473b65672d79aea478cdecabfba972a2, type: 3}
+  movementTarget: {x: 0.2872189, y: -0.127385, z: -2.43}
   rand: 3
-  dirty: 0

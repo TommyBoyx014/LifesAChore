@@ -5,7 +5,7 @@ using UnityEngine;
 public class GetInsidePlayer : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 30f;
+    public float speed = 60f;
 
     // Update is called once per frame
     void Update()

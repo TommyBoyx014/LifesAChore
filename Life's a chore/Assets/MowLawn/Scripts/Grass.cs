@@ -18,4 +18,5 @@ public class Grass : MonoBehaviour
             a.transform.position = new Vector2(Random.Range(-screenBounds.x, screenBounds.x), Random.Range(-screenBounds.y, screenBounds.y));
         }
     }
+
 }

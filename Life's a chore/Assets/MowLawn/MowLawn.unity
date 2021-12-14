@@ -263,7 +263,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 330246648}
-  - component: {fileID: 330246647}
   m_Layer: 0
   m_Name: GameUI
   m_TagString: Untagged
@@ -271,18 +270,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &330246647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330246646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 311b6f6c1b063e84e9f026151ed65e4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &330246648
 Transform:
   m_ObjectHideFlags: 0
@@ -486,7 +473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 912557721}
-  speed: 30
+  speed: 50
 --- !u!143 &912557721
 CharacterController:
   m_ObjectHideFlags: 0
@@ -553,7 +540,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 992974409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d3159acfd8e41f4789a5528fb1a9da5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d7909f0d0461ae4e9d6cdfe5856ddb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1252554851}
@@ -1037,7 +1024,7 @@ GameObject:
   - component: {fileID: 1431928136}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

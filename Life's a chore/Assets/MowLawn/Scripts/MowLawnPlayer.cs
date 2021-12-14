@@ -5,7 +5,7 @@ using UnityEngine;
 public class MowLawnPlayer : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 30f;
+    public float speed = 50f;
 
     // Update is called once per frame
     void Update()

@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/MainMenu/MainMenu.unity
     guid: 9bcf97cfe8b2e2b499add2dad59949b9
   - enabled: 1
     path: Assets/MowLawn/MowLawn.unity

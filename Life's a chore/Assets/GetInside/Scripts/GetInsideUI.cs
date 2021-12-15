@@ -20,6 +20,7 @@ public class GetInsideUI : MonoBehaviour
     private void Start()
     {
         PlayerPrefs.GetInt("score", score); //Get the score from previous game
+        Debug.Log(""+score);
         //PlayerPrefs.GetInt("lives", lives);
         scoreText.text = "Score: " + score; //Display score
         //livesText.text = "Lives: " + lives;
@@ -50,7 +51,7 @@ public class GetInsideUI : MonoBehaviour
         //if score changed, enable next button and increase player score
         if (PlayerPrefs.GetInt("score") != score)
         {
-            Debug.Log("score changed");
+            Debug.Log("" + PlayerPrefs.GetInt("score"));
             done = true;
             nextLevel.gameObject.SetActive(true);
         }
@@ -63,6 +64,7 @@ public class GetInsideUI : MonoBehaviour
     {
         if (timeRemaining == 0 & !done) 
         {
+            //Debug.Log("Didn't )
             PlayerPrefs.SetInt("score", 0);
             SceneManager.LoadScene("MainMenu");
         }

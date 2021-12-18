@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour
     //private int lives = -1;
     [SerializeField] Text scoreText;
     [SerializeField] Text timeText;
+    [SerializeField] Text tirePressure;
     [SerializeField] Button nextLevel;
     private bool timerIsRunning = true;
     private float timeRemaining = 10.0f;
@@ -22,6 +23,7 @@ public class UIController : MonoBehaviour
         scoreText.text = "Score: " + score;
         //livesText.text = "Lives: " + lives;
         PlayerPrefs.SetFloat("timeRemaining", timeRemaining);
+        tirePressure.text = "0";
         nextLevel.enabled = false;
     }
 

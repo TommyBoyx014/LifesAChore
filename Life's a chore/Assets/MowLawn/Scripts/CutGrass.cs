@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CutGrass : MonoBehaviour
 {
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")

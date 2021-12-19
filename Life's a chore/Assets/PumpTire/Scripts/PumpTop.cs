@@ -71,6 +71,7 @@ public class PumpTop : MonoBehaviour
                 if (tirePressure == 25)
                 {
                     tire.changeSize();
+                    PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 1);
                 }
             }
 

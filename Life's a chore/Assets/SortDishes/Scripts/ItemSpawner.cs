@@ -22,10 +22,10 @@ public class ItemSpawner : MonoBehaviour
     System.Random itemPicker = new System.Random();
     System.Random randDirty = new System.Random();
     public int dirty = 0;
-
+    public int gameCount;
     int activePrefab = 0;
     public static int rand = 0;
-
+    public GameObject Indicator;
     Plate plate;
     Cup cup;
     Bowl bowl;
@@ -125,25 +125,38 @@ public class ItemSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKeyDown(KeyCode.N) || Input.GetKeyDown(KeyCode.M))
+        if (!(gameCount == 10))
         {
-            dirty = randDirty.Next(1, 3);
-            if (spoon == null && fork == null && plate == null && bowl == null && cup == null && knife == null)
+            if (GameObject.Find(Indicator.name + "(Clone)"))
             {
-                activePrefab = 0;
+                gameCount++;
+                Destroy(GameObject.Find(Indicator.name + "(Clone)"));
+                Debug.Log("working");
+                Debug.Log("Correct: " + gameCount);
             }
-            activePrefab++;
-            if (activePrefab == 1)
+            if (gameCount == 10)
             {
-                
-                StartCoroutine(StartGame(dirty));
-                
+                //end game
+                Debug.Log("Done!");
             }
+            if (Input.GetKeyDown(KeyCode.N) || Input.GetKeyDown(KeyCode.M))
+            {
+               
+                dirty = randDirty.Next(1, 3);
+                if (spoon == null && fork == null && plate == null && bowl == null && cup == null && knife == null)
+                {
+                    activePrefab = 0;
+                }
+                activePrefab++;
+                if (activePrefab == 1)
+                {
 
+                    StartCoroutine(StartGame(dirty));
+                }
+
+            }
+           
         }
-       
-    
     }
    
 }

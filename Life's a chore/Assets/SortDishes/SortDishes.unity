@@ -683,6 +683,8 @@ MonoBehaviour:
   dirtyKnife: {fileID: 7216941232553302640, guid: ca82f47b28ae3294185793908a767c86, type: 3}
   knife_prefab: {fileID: -7593731516046816123, guid: 96f3a1511ceb4b349be8a0b6f5c205ce, type: 3}
   dirty: 0
+  gameCount: 0
+  Indicator: {fileID: 6615066932899406552, guid: 9c495bd41a0230642938e20f5d39c8a8, type: 3}
 --- !u!4 &723122815
 Transform:
   m_ObjectHideFlags: 0

@@ -7,12 +7,12 @@ public class Knife : MonoBehaviour
 
     public Vector3 movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
     public int dirty = 0;
+
     // Start is called before the first frame update
     void Start()
     {
 
         movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
-        gameObject.transform.localScale = new Vector3(7f, 7f, 7f);
 
     }
 
@@ -49,6 +49,7 @@ public class Knife : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.M))
                 {
                     Debug.Log("Right!");
+
 
                     movementTarget = new Vector3(5f, -0.127385f, -2.43f);
                 }

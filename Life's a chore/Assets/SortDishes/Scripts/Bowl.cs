@@ -7,18 +7,19 @@ public class Bowl : MonoBehaviour
 
     public Vector3 movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
     public int dirty = 0;
+
     // Start is called before the first frame update
     void Start()
     {
 
         movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
-        
-}
 
-// Update is called once per frame
-void Update()
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-        if(gameObject.tag == "Dirty")
+        if (gameObject.tag == "Dirty")
         {
             dirty = 1;
         }
@@ -48,6 +49,7 @@ void Update()
                 if (Input.GetKeyDown(KeyCode.M))
                 {
                     Debug.Log("Right!");
+
 
                     movementTarget = new Vector3(5f, -0.127385f, -2.43f);
                 }

@@ -41,8 +41,12 @@ public class ItemSpawner : MonoBehaviour
         
     }
 
-    IEnumerator StartGame(int rand, int dirty)
+   
+    IEnumerator StartGame(int dirty)
     {
+        rand = itemPicker.Next(1, 7);
+        
+
         switch (rand)
         {
             case 1:
@@ -110,7 +114,7 @@ public class ItemSpawner : MonoBehaviour
                         knife = Instantiate(dirtyKnife, this.transform.position, Quaternion.Euler(90, -90, 0));
                         break;
                 }
-                
+
                 break;
         }        
             yield return null;
@@ -124,7 +128,7 @@ public class ItemSpawner : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.N) || Input.GetKeyDown(KeyCode.M))
         {
-            
+            dirty = randDirty.Next(1, 3);
             if (spoon == null && fork == null && plate == null && bowl == null && cup == null && knife == null)
             {
                 activePrefab = 0;
@@ -132,13 +136,14 @@ public class ItemSpawner : MonoBehaviour
             activePrefab++;
             if (activePrefab == 1)
             {
-                rand = itemPicker.Next(1, 7);
-                dirty = randDirty.Next(1, 3);
-                StartCoroutine(StartGame(rand, dirty));
+                
+                StartCoroutine(StartGame(dirty));
                 
             }
 
         }
+       
+    
     }
    
 }

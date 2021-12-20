@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plate : MonoBehaviour
+public class Knife : MonoBehaviour
 {
 
     public Vector3 movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
@@ -12,6 +12,7 @@ public class Plate : MonoBehaviour
     {
 
         movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
+        gameObject.transform.localScale = new Vector3(7f, 7f, 7f);
 
     }
 

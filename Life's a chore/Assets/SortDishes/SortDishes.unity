@@ -680,6 +680,8 @@ MonoBehaviour:
   dirtySpoon: {fileID: 1286426016173276464, guid: d90078755a7e6844f81b54a9daa42502, type: 3}
   dirtyBowl: {fileID: 4291409275396767334, guid: 2ef4e1bf85ddd554ebf99138bfce753f, type: 3}
   dirtyCup: {fileID: 6632125794606199520, guid: e301b40d1b745264cb85594ba8130c16, type: 3}
+  dirtyKnife: {fileID: 7216941232553302640, guid: ca82f47b28ae3294185793908a767c86, type: 3}
+  knife_prefab: {fileID: -7593731516046816123, guid: 96f3a1511ceb4b349be8a0b6f5c205ce, type: 3}
   dirty: 0
 --- !u!4 &723122815
 Transform:

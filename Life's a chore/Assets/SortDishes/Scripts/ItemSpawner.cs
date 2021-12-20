@@ -15,6 +15,8 @@ public class ItemSpawner : MonoBehaviour
     public Spoon dirtySpoon;
     public Bowl dirtyBowl;
     public Cup dirtyCup;
+    public Knife dirtyKnife;
+    public Knife knife_prefab;
 
 
     System.Random itemPicker = new System.Random();
@@ -29,12 +31,14 @@ public class ItemSpawner : MonoBehaviour
     Bowl bowl;
     Fork fork;
     Spoon spoon;
+    Knife knife;
 
     // Start is called before the first frame update
     void Start()
     {
-       rand = itemPicker.Next(1, 6);
-       dirty = randDirty.Next(1, 3);
+       rand = itemPicker.Next(1, 7);
+        dirty = randDirty.Next(1, 3);
+        
     }
 
     IEnumerator StartGame(int rand, int dirty)
@@ -96,6 +100,18 @@ public class ItemSpawner : MonoBehaviour
                         break;
                 }
                 break;
+            case 6:
+                switch (dirty)
+                {
+                    case 1:
+                        knife = Instantiate(knife_prefab, this.transform.position, Quaternion.Euler(90, -90, 0));
+                        break;
+                    case 2:
+                        knife = Instantiate(dirtyKnife, this.transform.position, Quaternion.Euler(90, -90, 0));
+                        break;
+                }
+                
+                break;
         }        
             yield return null;
     }
@@ -105,23 +121,24 @@ public class ItemSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.N) || Input.GetKeyDown(KeyCode.M))
         {
-            if (spoon == null && fork == null && plate == null && bowl == null && cup == null)
+            
+            if (spoon == null && fork == null && plate == null && bowl == null && cup == null && knife == null)
             {
                 activePrefab = 0;
             }
             activePrefab++;
             if (activePrefab == 1)
             {
-                rand = itemPicker.Next(1, 6);
+                rand = itemPicker.Next(1, 7);
                 dirty = randDirty.Next(1, 3);
                 StartCoroutine(StartGame(rand, dirty));
+                
             }
 
         }
-        
-       
-            
     }
+   
 }

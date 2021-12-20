@@ -23,7 +23,6 @@ public class UIController : MonoBehaviour
         scoreText.text = "Score: " + score;
         //livesText.text = "Lives: " + lives;
         PlayerPrefs.SetFloat("timeRemaining", timeRemaining);
-        tirePressure.text = "0";
         nextLevel.enabled = false;
     }
 

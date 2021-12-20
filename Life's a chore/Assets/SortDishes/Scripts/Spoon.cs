@@ -6,7 +6,6 @@ public class Spoon : MonoBehaviour
 {
 
     public Vector3 movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
-    public int rand = ItemSpawner.rand;
     public int dirty = 0;
     // Start is called before the first frame update
     void Start()

@@ -322,6 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1423771951}
   timeText: {fileID: 485758533}
+  tirePressure: {fileID: 0}
   nextLevel: {fileID: 1221940543}
 --- !u!1 &320385073
 GameObject:

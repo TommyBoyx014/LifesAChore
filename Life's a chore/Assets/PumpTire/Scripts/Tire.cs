@@ -16,8 +16,13 @@ public class Tire : MonoBehaviour
         
     }
 
-    public void changeSize()
+  public void DestroyObj()
     {
-        gameObject.transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
+        Destroy(gameObject);
+    }
+
+    public void scaleObj()
+    {
+        gameObject.transform.localScale += new Vector3(2f, 2f, 2f);
     }
 }

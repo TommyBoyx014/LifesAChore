@@ -10,12 +10,18 @@ public class PumpTop : MonoBehaviour
     int kHit = 0;
     int jHit = 0;
     bool complete = false;
-    public Tire tire;
+    public Tire tire_0;
+    public Tire tire_50;
+    public Tire tire_100;
+
+    Tire tire;
 
 
     void Start()
     {
-        
+        tire = Instantiate(tire_0, new Vector3(0f,3f,-2.6f), this.transform.rotation);
+        tire.scaleObj();
+
     }
 
     // Update is called once per frame
@@ -60,19 +66,20 @@ public class PumpTop : MonoBehaviour
                     jHit = 0;
                 }
 
-                if (tirePressure == 10)
+                if (tirePressure == 13)
                 {
-                    tire.changeSize();
-                }
-                if (tirePressure == 20)
-                {
-                    tire.changeSize();
+                    tire.DestroyObj();
+                    tire = Instantiate(tire_50, new Vector3(0f, 3f, -2.6f), this.transform.rotation);
+                    tire.scaleObj();
                 }
                 if (tirePressure == 25)
                 {
-                    tire.changeSize();
-                    PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 1);
+                    tire.DestroyObj();
+                    tire = Instantiate(tire_100, new Vector3(0f, 3f, -2.6f), this.transform.rotation);
+                    tire.scaleObj();
+
                 }
+
             }
 
 

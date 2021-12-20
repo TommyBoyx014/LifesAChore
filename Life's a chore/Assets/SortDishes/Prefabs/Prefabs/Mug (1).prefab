@@ -94,5 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7554328739461cc409523ab5940d0ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rand: 2
+  movementTarget: {x: 0.2872189, y: -0.127385, z: -2.43}
   dirty: 0
+  indicator: {fileID: 6615066932899406552, guid: 9c495bd41a0230642938e20f5d39c8a8, type: 3}

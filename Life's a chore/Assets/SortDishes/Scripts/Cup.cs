@@ -7,13 +7,13 @@ public class Cup : MonoBehaviour
 
     public Vector3 movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
     public int dirty = 0;
-
+    public GameObject indicator;
     // Start is called before the first frame update
     void Start()
     {
 
         movementTarget = new Vector3(0.2872189f, -0.127385f, -2.43f);
-      
+
     }
 
     // Update is called once per frame
@@ -39,8 +39,9 @@ public class Cup : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.N))
                 {
                     Debug.Log("Right!");
-
                     movementTarget = new Vector3(-5f, -0.127385f, -2.43f);
+                    Instantiate(indicator, this.transform.position, this.transform.rotation);
+
                 }
                 break;
 
@@ -49,7 +50,8 @@ public class Cup : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.M))
                 {
                     Debug.Log("Right!");
-            
+                    Instantiate(indicator, this.transform.position, this.transform.rotation);
+
 
                     movementTarget = new Vector3(5f, -0.127385f, -2.43f);
                 }

@@ -32,6 +32,8 @@ public class PumpTop : MonoBehaviour
         {
             if (tirePressure == 25)
             {
+                PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 1);
+                PlayerPrefs.Save();
                 complete = true;
             }
 
@@ -90,8 +92,7 @@ public class PumpTop : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 1);
-            PlayerPrefs.Save();
+            
             Debug.Log("DONE");
             //do something to UI
         }

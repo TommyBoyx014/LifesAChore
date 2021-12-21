@@ -91,6 +91,7 @@ public class PumpTop : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 1);
+            PlayerPrefs.Save();
             Debug.Log("DONE");
             //do something to UI
         }

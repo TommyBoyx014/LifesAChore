@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score")+1);
+            PlayerPrefs.Save();
         }
     }
 }

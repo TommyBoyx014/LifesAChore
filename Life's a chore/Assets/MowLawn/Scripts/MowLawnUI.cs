@@ -12,15 +12,13 @@ public class MowLawnUI : MonoBehaviour
     [SerializeField] Text timeText;
     [SerializeField] Button nextLevel;
     private bool timerIsRunning = true;
-    private float timeRemaining = 10.0f;
+    private float timeRemaining = 15.0f;
 
     //[SerializeField] public Text livesText;
 
     private void Start()
     {
-        Debug.Log("score1: "+score);
-        PlayerPrefs.GetInt("score", score); //Get the score from previous game
-        Debug.Log("score2: " + score);
+        score = PlayerPrefs.GetInt("score", score); //Get the score from previous game
         //PlayerPrefs.GetInt("lives", lives);
         scoreText.text = "Score: " + score; //Display score
         //livesText.text = "Lives: " + lives;
@@ -51,13 +49,13 @@ public class MowLawnUI : MonoBehaviour
         //if no more grass, increase score 
         if (GameObject.FindGameObjectsWithTag("grass").Length == 1)
         {
-            score++;
+            PlayerPrefs.SetInt("score", score+1);
         }
         
         //if score changed, enable next button and increase player score
         if (PlayerPrefs.GetInt("score") != score)
         {
-            PlayerPrefs.SetInt("score", score);
+            PlayerPrefs.Save();
             nextLevel.gameObject.SetActive(true);
         }
 

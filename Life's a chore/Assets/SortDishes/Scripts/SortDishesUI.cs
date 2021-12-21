@@ -12,15 +12,13 @@ public class SortDishesUI : MonoBehaviour
     [SerializeField] Text timeText;
     [SerializeField] Button nextLevel;
     private bool timerIsRunning = true;
-    private float timeRemaining = 10.0f;
+    private float timeRemaining = 15.0f;
 
     //[SerializeField] public Text livesText;
 
     private void Start()
     {
-        Debug.Log("score1: " + score);
-        PlayerPrefs.GetInt("score", score); //Get the score from previous game
-        Debug.Log("score2: " + score);
+        score = PlayerPrefs.GetInt("score", score); //Get the score from previous game
         //PlayerPrefs.GetInt("lives", lives);
         scoreText.text = "Score: " + score; //Display score
         //livesText.text = "Lives: " + lives;
@@ -58,6 +56,7 @@ public class SortDishesUI : MonoBehaviour
         if (PlayerPrefs.GetInt("score") != score)
         {
             PlayerPrefs.SetInt("score", score);
+            PlayerPrefs.Save();
             nextLevel.gameObject.SetActive(true);
         }
 
@@ -71,6 +70,7 @@ public class SortDishesUI : MonoBehaviour
         if (timeRemaining == 0 & num > 1) //Check if there's still grass
         {
             PlayerPrefs.SetInt("score", 0);
+            PlayerPrefs.Save();
             SceneManager.LoadScene("MainMenu");
         }
     }

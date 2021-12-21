@@ -13,6 +13,7 @@ public class SortDishesUI : MonoBehaviour
     [SerializeField] Button nextLevel;
     private bool timerIsRunning = true;
     private float timeRemaining = 15.0f;
+    private bool done = false;
 
     //[SerializeField] public Text livesText;
 
@@ -46,16 +47,11 @@ public class SortDishesUI : MonoBehaviour
         }
         timeText.text = "Time: " + timeRemaining; //Display time
 
-        //if no more grass, increase score 
-        if (GameObject.FindGameObjectsWithTag("grass").Length == 1)
-        {
-            score++;
-        }
-
         //if score changed, enable next button and increase player score
         if (PlayerPrefs.GetInt("score") != score)
         {
-            PlayerPrefs.SetInt("score", score);
+            Debug.Log("" + PlayerPrefs.GetInt("score"));
+            done = true;
             PlayerPrefs.Save();
             nextLevel.gameObject.SetActive(true);
         }
@@ -66,11 +62,10 @@ public class SortDishesUI : MonoBehaviour
     //Reset score, and go back to main menu
     private void gameOver()
     {
-        int num = GameObject.FindGameObjectsWithTag("grass").Length;
-        if (timeRemaining == 0 & num > 1) //Check if there's still grass
+        if (timeRemaining == 0 & !done)
         {
+            //Debug.Log("Didn't )
             PlayerPrefs.SetInt("score", 0);
-            PlayerPrefs.Save();
             SceneManager.LoadScene("MainMenu");
         }
     }

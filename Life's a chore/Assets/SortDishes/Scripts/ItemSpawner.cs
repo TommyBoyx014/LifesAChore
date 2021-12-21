@@ -125,7 +125,7 @@ public class ItemSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!(gameCount == 10))
+        if (!(gameCount == 7))
         {
             if (GameObject.Find(Indicator.name + "(Clone)"))
             {
@@ -134,9 +134,10 @@ public class ItemSpawner : MonoBehaviour
                 Debug.Log("working");
                 Debug.Log("Correct: " + gameCount);
             }
-            if (gameCount == 10)
+            if (gameCount == 7)
             {
                 //end game
+                PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 1);
                 Debug.Log("Done!");
             }
             if (Input.GetKeyDown(KeyCode.N) || Input.GetKeyDown(KeyCode.M))

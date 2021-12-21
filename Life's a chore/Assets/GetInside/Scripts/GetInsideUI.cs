@@ -19,8 +19,9 @@ public class GetInsideUI : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("score1: " + score);
         PlayerPrefs.GetInt("score", score); //Get the score from previous game
-        Debug.Log(""+score);
+        Debug.Log("score2: " + score);
         //PlayerPrefs.GetInt("lives", lives);
         scoreText.text = "Score: " + score; //Display score
         //livesText.text = "Lives: " + lives;

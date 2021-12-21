@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MowLawnUI : MonoBehaviour
+public class PumpTireUI : MonoBehaviour
 {
     private int score = -1;
     //private int lives = -1;
@@ -18,7 +18,7 @@ public class MowLawnUI : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("score1: "+score);
+        Debug.Log("score1: " + score);
         PlayerPrefs.GetInt("score", score); //Get the score from previous game
         Debug.Log("score2: " + score);
         //PlayerPrefs.GetInt("lives", lives);
@@ -47,13 +47,13 @@ public class MowLawnUI : MonoBehaviour
             }
         }
         timeText.text = "Time: " + timeRemaining; //Display time
-        
+
         //if no more grass, increase score 
         if (GameObject.FindGameObjectsWithTag("grass").Length == 1)
         {
             score++;
         }
-        
+
         //if score changed, enable next button and increase player score
         if (PlayerPrefs.GetInt("score") != score)
         {
@@ -61,14 +61,14 @@ public class MowLawnUI : MonoBehaviour
             nextLevel.gameObject.SetActive(true);
         }
 
-        
+
     }
 
     //Reset score, and go back to main menu
     private void gameOver()
     {
         int num = GameObject.FindGameObjectsWithTag("grass").Length;
-        if(timeRemaining == 0 & num > 1) //Check if there's still grass
+        if (timeRemaining == 0 & num > 1) //Check if there's still grass
         {
             PlayerPrefs.SetInt("score", 0);
             SceneManager.LoadScene("MainMenu");

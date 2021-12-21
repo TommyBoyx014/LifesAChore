@@ -947,9 +947,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 918752607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea0367a9b392874b930f1639f956f8d, type: 3}
+  m_Script: {fileID: 11500000, guid: e6f4d91251a22fb49ba24461477b0d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 488231847}
+  timeText: {fileID: 105953873}
+  nextLevel: {fileID: 1446825364}
 --- !u!1 &1060923281
 GameObject:
   m_ObjectHideFlags: 0
